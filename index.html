@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rishivardhan | DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="top-section">
+      
+      <!-- Left: Tabs + Image/Terminal Box -->
+      <div class="left-content">
+        <div class="tabs">
+          <button class="tab-btn active" onclick="showProjects()">PROJECTS</button>
+          <button class="tab-btn" onclick="showAbout()">ABOUT ME</button>
+        </div>
+
+        <div class="content-box">
+          <!-- Carousel -->
+          <div class="carousel active" id="projectBox">
+            <button class="carousel-btn left" onclick="prevSlide()">&#9664;</button>
+            <img src="project1.png" class="active" id="slide" alt="Project 1"/>
+            <button class="carousel-btn right" onclick="nextSlide()">&#9654;</button>
+          </div>
+
+          <!-- Linux-style Terminal Box -->
+          <div class="terminal-box" id="aboutBox">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">rishivardhan@portfolio:~$</span>
+            </div>
+            <div class="terminal-body">
+              <p id="typedText"></p>
+              <div class="terminal-contact">
+                <p><strong>📞</strong> +91-9876543210</p>
+                <p><strong>📧</strong> kokkularishivardhan@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Profile Info -->
+      <div class="profile-section">
+        <h2 class="profile-heading">PROFILE</h2>
+        <img src="your-profile.jpg" alt="Rishivardhan Kokkula" />
+        <h3>RISHIVARDHAN KOKKULA</h3>
+        <h4 class="designation">DevOps Engineer</h4>
+        <p class="email-text">kokkularishivardhan@gmail.com</p>
+
+        <div class="profile-links">
+          <a href="mailto:kokkularishivardhan@gmail.com"><img src="https://img.icons8.com/color/48/000000/gmail--v1.png" alt="Gmail" /></a>
+          <a href="https://www.linkedin.com/in/rishivardhan-kokkula-441434262/" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn" /></a>
+          <a href="https://github.com/Kokkularishivardhangithub" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub" /></a>
+        </div>
+
+        <div class="resume-download">
+          <a href="resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="skills-section">
+      <h3 class="skills-label">TECH STACK</h3>
+      <div class="skills-scroll">
+        <div class="skills-track">
+          <img src="logos/aws.png" alt="AWS" />
+          <img src="logos/github.png" alt="GitHub" />
+          <img src="logos/kubernetes.png" alt="Kubernetes" />
+          <img src="logos/bash.png" alt="Bash" />
+          <img src="logos/linux.png" alt="Linux" />
+          <img src="logos/terraform.png" alt="Terraform" />
+          <img src="logos/azure.png" alt="Azure" />
+          <img src="logos/docker.png" alt="Docker" />
+          <img src="logos/gcp.png" alt="GCP" />
+          <!-- Repeat -->
+          <img src="logos/aws.png" alt="AWS" />
+          <img src="logos/github.png" alt="GitHub" />
+          <img src="logos/kubernetes.png" alt="Kubernetes" />
+          <img src="logos/bash.png" alt="Bash" />
+          <img src="logos/linux.png" alt="Linux" />
+          <img src="logos/terraform.png" alt="Terraform" />
+          <img src="logos/azure.png" alt="Azure" />
+          <img src="logos/docker.png" alt="Docker" />
+          <img src="logos/gcp.png" alt="GCP" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

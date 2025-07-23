@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.main-container {
+  max-width: 1400px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  height: 75vh;
+}
+
+/* LEFT SECTION */
+.left-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.content-box {
+  flex: 1;
+  position: relative;
+}
+
+.carousel, .terminal-box {
+  height: 100%;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel.active,
+.terminal-box.active {
+  display: flex;
+}
+
+.carousel img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+/* TERMINAL */
+.terminal-box {
+  flex-direction: column;
+  font-family: monospace;
+  color: #33ff33;
+  background-color: #000;
+}
+
+.terminal-header {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.terminal-title {
+  margin-left: auto;
+  color: #aaa;
+}
+
+.terminal-body {
+  padding: 1rem;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  height: 100%;
+  width: 100%;
+}
+
+.prompt {
+  color: #00ffff;
+  margin-right: 0.5rem;
+}
+
+.terminal-contact {
+  margin-top: 2rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* PROFILE SECTION */
+.profile-section {
+  width: 300px;
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.profile-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 20px #ccc;
+  margin: auto;
+}
+
+.profile-section h3 {
+  margin: 1rem 0 0.2rem;
+  font-size: 1.5rem;
+}
+
+.designation {
+  font-size: 1rem;
+  color: gray;
+  margin-bottom: 0.3rem;
+}
+
+.email-text {
+  font-size: 0.9rem;
+  color: #0077b5;
+  margin-bottom: 1rem;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.profile-links a img {
+  width: 30px;
+  height: 30px;
+}
+
+.resume-download {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.resume-download a {
+  background-color: #0077b5;
+  color: white;
+  padding: 1.3rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* TECH STACK */
+.skills-section {
+  height: 20vh;
+  text-align: center;
+}
+
+.skills-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.skills-scroll {
+  overflow: hidden;
+  background: #f5f5f5;
+  padding: 1rem 0;
+}
+
+.skills-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-marquee 25s linear infinite;
+}
+
+.skills-track img {
+  height: 50px;
+  margin: 0 1.5rem;
+  filter: grayscale(40%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skills-track img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
