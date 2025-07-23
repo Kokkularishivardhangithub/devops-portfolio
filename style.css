@@ -262,3 +262,30 @@ body {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
+.resume-download {
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 2rem;
+}
+
+.resume-download-box {
+  background-color: #0077b5;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-download-box:hover {
+  background-color: #005f91;
+}
+
+.resume-download-box img {
+  width: 30px;
+  height: 30px;
+}
